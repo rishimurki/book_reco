@@ -4,7 +4,7 @@ from tkinter import LEFT, W, messagebox
 import matplotlib.pyplot as plt
 import random
 
-with open("/home/achal/Documents/Input_csv.csv", "r") as csv_file:
+with open("path to all books csv file", "r") as csv_file:
     var=csv.reader(csv_file)
     l=[]
     for i in var:
