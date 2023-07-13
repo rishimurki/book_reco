@@ -4,7 +4,9 @@ from tkinter import LEFT, W, messagebox
 import matplotlib.pyplot as plt
 import random
 
-with open("path to all books csv file", "r") as csv_file:
+books_path = 'books.csv'
+
+with open(books_path, "r") as csv_file:
     var=csv.reader(csv_file)
     l=[]
     for i in var:
@@ -52,7 +54,7 @@ def func():
 
         messagebox.showinfo("Confirmation Box","You have successfully entered values into the csv file.")
         l=([name.get(), author.get(), language.get(), year.get(), sales.get(), genre.get()])
-        with open('/home/achal/Documents/Input_csv.csv','a') as csv_file:
+        with open(books_path,'a') as csv_file:
             W=csv.writer(csv_file)
             W.writerow(l)
 
@@ -259,7 +261,7 @@ def recom():
 
                 fig=plt.figure()
                 #plotting graph of n_books and n_sales
-                plt.bar(n_book,n_sales)
+                plt.plot(n_book,n_sales)
                 #setting label
                 plt.ylabel('Books sold in millions')
                 #setting title
