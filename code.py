@@ -261,7 +261,7 @@ def recom():
 
                 fig=plt.figure()
                 #plotting graph of n_books and n_sales
-                plt.plot(n_book,n_sales)
+                plt.bar(n_book,n_sales)
                 #setting label
                 plt.ylabel('Books sold in millions')
                 #setting title
